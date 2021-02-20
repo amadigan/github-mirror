@@ -1,0 +1,11 @@
+name: 'Mirror to GitHub'
+description: 'Mirror a repository to GitHub'
+inputs:
+  origin:
+    description: 'URL of remote git repository'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.origin }}
